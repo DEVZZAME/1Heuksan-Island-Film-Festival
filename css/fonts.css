@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'YESMyoungjo-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff') format('woff');
+    font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Nelphim';
+        src: url("https://db.onlinewebfonts.com/t/66e0421639059890083df5bbd6cee605.woff2") format("woff2"),
+             url("https://db.onlinewebfonts.com/t/66e0421639059890083df5bbd6cee605.woff") format("woff"),
+             url("https://db.onlinewebfonts.com/t/66e0421639059890083df5bbd6cee605.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
