@@ -18,7 +18,7 @@ particlesJS("particles-js", {
       line_linked: { enable: false },
       move: {
         enable: true,
-        speed: 0.3,
+        speed: 0.1,
         direction: "none",
         out_mode: "out"
       }
@@ -33,3 +33,4 @@ particlesJS("particles-js", {
     },
     retina_detect: true
   });
+  
