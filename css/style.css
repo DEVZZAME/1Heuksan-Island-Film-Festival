@@ -128,15 +128,6 @@ body {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .background-container img {
-    width: 200vw;
-  }
-  .sub-title-ko {
-    width: 90vw;
-  }
-}
-
 .title-text-area p {
   color: #000816;
   text-align: center;
@@ -156,12 +147,6 @@ body {
   font-family: "Nelphim", serif;
   font-size: clamp(12px, 2vw, 16px);
 }
-
-
-
-
-
-
 
 .content-text-area {
   position: absolute;
@@ -199,8 +184,6 @@ body {
   margin-bottom: 7vh;
 }
 
-
-
 .lottie-ship {
   position: absolute;
   top: 38.5%;
@@ -224,8 +207,240 @@ body {
   opacity: 0.7;
 }
 
-.btn svg{
+.btn img{
   width: 20vw;
+  min-width: 220px;
   height: auto;
 }
 
+#textLine {
+  width: 60%;
+}
+
+@media (max-width: 950px) {
+  .background-container img {
+    width: 150vw;
+  }
+  #textLine {
+    width: 55%;
+  }
+
+  .btn img{
+    width: 20vw;
+    min-width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .background-container img {
+    width: 200vw;
+  }
+  .sub-title-ko {
+    width: 90vw;
+  }
+
+  .title-text-area {
+    top: 20%;
+  }
+  #textLine {
+    width: 50%;
+  }
+  .title-en {
+    font-size: clamp(30px, 7vw, 120px);
+    margin-bottom: 5vh;
+  }
+  
+  .title-cn {
+    z-index: 3;
+    margin-bottom: 3vh;
+  }
+  
+  .title-cn img {
+    width: clamp(120px, 30vw, 230px);
+  }
+  
+  .title-ko {
+    margin-bottom: 10vh;
+  }
+  
+  .title-ko img {
+    width: clamp(120px, 30vw, 410px);
+  }
+  
+  .sub-title-ko {
+    font-size: clamp(14px, 4vw, 18px);
+    margin-bottom: 4vh;
+  }
+  
+  .sub-title-ko p:not(:last-child) {
+    margin-bottom: 2vh;
+  }
+  
+  .sub-title-date {
+    font-family: "Nelphim", serif;
+    font-size: clamp(12px, 2vw, 16px);
+  }
+  
+  .lottie-ship {
+    top: 38.5%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .lottie-whale {
+    top: 45%;
+    left: 25%;
+    width: 150%;
+    height: auto;
+  }
+
+  .content-text-area {
+    top: 65%;
+    left: 15%;
+  }
+  
+  .content-text-area p {
+    text-align: left;
+    font-family: "YESMyoungjo-Regular", serif;
+    color: #fff;
+  }
+  
+  .content-text1{
+    font-size: clamp(14px, 2vw, 18px);
+    margin-bottom: 7vh;
+  }
+  
+  .content-text2{
+    font-size: clamp(16px, 2.2vw, 20px);
+    margin-bottom: 7vh;
+  }
+  
+  .content-text3{
+    font-size: clamp(12px, 2vw, 16px);
+  }
+  
+  .content-text3 p, .content-text4 p, .content-text5 p, .content-text6 p {
+    margin-bottom: 2vh;
+  }
+  
+  .content-text4, .content-text5, .content-text6 {
+    font-size: clamp(12px, 2vw, 16px);
+    margin-bottom: 7vh;
+  }
+
+  .btn img{
+    width: 20vw;
+    min-width: 160px;
+    height: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .background-container img {
+    width: 280vw;
+  }
+  .sub-title-ko {
+    width: 90vw;
+  }
+
+  .title-text-area {
+    top: 20%;
+  }
+
+  #textLine {
+    width: 70%;
+    min-width: 210px;
+  }
+
+  .title-en {
+    font-size: clamp(30px, 8vw, 120px);
+    margin-bottom: 8vh;
+  }
+  
+  .title-cn {
+    z-index: 3;
+    margin-bottom: 2vh;
+  }
+  
+  .title-cn img {
+    width: clamp(120px, 40vw, 230px);
+  }
+  
+  .title-ko {
+    margin-bottom: 6vh;
+  }
+  
+  .title-ko img {
+    width: clamp(120px, 45vw, 410px);
+  }
+  
+  .sub-title-ko {
+    font-size: clamp(14px, 4vw, 18px);
+    margin-bottom: 4vh;
+  }
+  
+  .sub-title-ko p:not(:last-child) {
+    margin-bottom: 1.5vh;
+  }
+  
+  .sub-title-date {
+    font-family: "Nelphim", serif;
+    font-size: clamp(12px, 3.5vw, 16px);
+  }
+  
+  .lottie-ship {
+    top: 33%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .lottie-whale {
+    top: 40%;
+    left: 10%;
+    width: 180%;
+    height: auto;
+  }
+
+  .content-text-area {
+    top: 65%;
+    left: 15%;
+  }
+  
+  .content-text-area p {
+    text-align: left;
+    font-family: "YESMyoungjo-Regular", serif;
+    color: #fff;
+  }
+  
+  .content-text1{
+    font-size: clamp(14px, 2.5vw, 18px);
+    margin-bottom: 7vh;
+  }
+  
+  .content-text2{
+    font-size: clamp(16px, 2.8vw, 20px);
+    margin-bottom: 7vh;
+  }
+  
+  .content-text3{
+    font-size: clamp(12px, 2.5vw, 16px);
+  }
+  
+  .content-text3 p, .content-text4 p, .content-text5 p, .content-text6 p {
+    margin-bottom: 2vh;
+  }
+  
+  .content-text4, .content-text5, .content-text6 {
+    font-size: clamp(12px, 2.5vw, 16px);
+    margin-bottom: 7vh;
+  }
+}
+
+@media (max-width: 350px) {
+  .background-container img {
+    width: 320vw;
+  }
+}
