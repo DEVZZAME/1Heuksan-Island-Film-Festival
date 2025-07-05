@@ -4,7 +4,7 @@
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/json/flowing.json'
+    path: 'json/flowing.json'
   });
 
   shipAnimation.setSpeed(0.5);
@@ -14,7 +14,7 @@
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/json/whale.json'
+    path: 'json/whale.json'
   });
 
   whaleAnimation.setSpeed(0.5);

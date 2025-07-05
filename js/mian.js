@@ -29,7 +29,7 @@
     });    
         // 배경 음악 객체 생성
     const bgm = new Howl({
-      src: ['/sounds/waves.mp3'],
+      src: ['sounds/waves.mp3'],
       autoplay: false, // autoplay는 브라우저 정책상 제한됨
       loop: true,
       volume: 1
