@@ -46,29 +46,24 @@
           </div>
         </div>
       </div>
-    
-      <!-- 콘텐츠 블록 1 -->
-      <div class="tracking-content">
-        <p class="subtitle">사라산다이</p>
-        <p class="title">“홍과 멋이 깃든 사리의 밤”</p>
-        <p class="desc">
-          ‘산다이’는 산넘허 섬 지역의 옛 말로, 조업을 마친 섬 청년들이 모여 노래하고<br />
-          춤추며 흥을 나누던 유흥의 자리로 통합니다.
-        </p>
-        <p class="desc small">
-          2025 흑산 섬 영화제에서는 이 전통의 정서를 담아,<br />
-          섬의 밤을 함께 즐기는 특별한 문화 프로그램으로 ‘사라산다이’를 준비했습니다.<br />
-          불빛 아래 펼쳐지는 노래와 공연, 흑산의 오래 정서와 흥이 깃든 밤을 함께하세요.
-        </p>
-      </div>
-    
       <!-- 콘텐츠 블록 2 -->
       <div class="tracking-content">
+        <p class="subtitle">사라산다이</p>
+        <p class="title">“흥과 멋이 깃든 사리의 밤”</p>
+        <p class="desc">
+          ‘산다이’는 서남해 섬 지역의 옛 말로, 조업을 마친 섬 청년들이 모여 노래하고<br>
+          춤추며 흥을 나누던 유흥의 자리를 뜻합니다.
+        </p>
+        <p class="desc small">
+          2025 흑산 섬 영화제에서는 이 전통의 정서를 담아,<br>
+          섬의 밤을 함께 즐기는 특별한 문화 프로그램으로 ‘사라산다이’를 준비했습니다.<br>
+          불빛 아래 펄쳐지는 노래와 공연, 흑산의 오랜 정서와 흥이 깃든 밤을 함께하세요.<br>
+        </p>
         <img src="images/tracking3.png" alt="트래킹 이미지 2" class="content-img" />
-        <p class="subtitle">자산어보 트래킹</p>
+        <p class="subtitle jasan">자산어보 트래킹</p>
         <p class="title">“섬의 풍경을 걷다, 흑산을 이해하는 또 다른 방식”</p>
         <p class="desc">
-          깊고 막막 펼쳐지는 흑산의 전경, 눈앞에 펼쳐지는 바다와 산, 마을의 모습까지 온 몸으로 느껴보세요.
+          깊고 막막 펼쳐지는 흑산의 전경,<br>눈앞에 펼쳐지는 바다와 산, 마을의 모습까지 온 몸으로 느껴보세요.
         </p>
         <p class="desc small">
           흑산도의 주요 트래킹 코스를 따라 걸으며 낮을 채우고, 저녁엔 영화제를 함께 즐기는 하루.<br />
@@ -86,7 +81,7 @@
     
     <!-- 배경 이미지 -->
     <div class="background-container">
-      <img src="images/main_background.png" alt="흑산도 배경" />
+      <img src="images/background_call.png" alt="흑산도 배경" />
     </div>
   </div>
   
@@ -132,6 +127,31 @@
       effect: 'fade',
     });
   </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+      threshold: 0.3 // 요소의 10%가 보이면 동작
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // 순차적으로 등장하도록 지연
+          setTimeout(() => {
+            entry.target.classList.add('show');
+          }, index * 800); // 각 요소마다 0.3초 간격
+          observer.unobserve(entry.target); // 한 번만 실행
+        }
+      });
+    }, observerOptions);
+
+    const items = document.querySelectorAll('.title-wrapper > *');
+    items.forEach(item => {
+      item.classList.add('fade-in-up');
+      observer.observe(item);
+    });
+  });
+</script>
   
   
 </body>

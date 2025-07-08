@@ -50,26 +50,26 @@
       </div>
 
       <div class="content-body">
-          <p class="bold">• 공모주제 : 흑산이 담긴 모든 영상</p>
-          <p>• 공모분야 : 단편영화, 다큐멘터리, 브이로그 등 다양한 형식의 단편 영상</p>
-          <p>• 작품규격 : 1) 영상길이 - 5분 내외 (최대 10분 이내)   2) 해상도 - Full HD 1920*1080이상</p>
-          <p>• 접수기간 : 8월 3일까지</p>
-          <p>• 참가자격 : 대한민국 국민 누구나 (개인 또는 팀)</p>
-          <p>• 출품 수 : 1인(또는 팀)당 출품 수 제한 없음 (*단, 수상은 1편만 가능)</p>
+          <p><span class="bold">• 공모주제 :</span> 흑산이 담긴 모든 영상</p>
+          <p><span class="bold">• 공모분야 :</span> 단편영화, 다큐멘터리, 브이로그 등 다양한 형식의 단편 영상</p>
+          <p><span class="bold">• 작품규격 :</span> 1) 영상길이 - 5분 내외 (최대 10분 이내)   2) 해상도 - Full HD 1920*1080이상</p>
+          <p><span class="bold">• 접수기간 :</span> 8월 3일까지</p>
+          <p><span class="bold">• 참가자격 :</span> 대한민국 국민 누구나 (개인 또는 팀)</p>
+          <p><span class="bold">• 출품 수 :</span> 1인(또는 팀)당 출품 수 제한 없음 (*단, 수상은 1편만 가능)</p>
           <br>
           <br>
-          <p class="bold">• 공모주제 : Youtube에 영상 업로드 후, 구글 폼을 이용한 출품신청서 제출</p>
+          <p><span class="bold">• 공모주제 :</span> Youtube에 영상 업로드 후, 구글 폼을 이용한 출품신청서 제출</p>
           <p class="indent">- 유튜브 업로드 시, ‘전체 공개’ 업로드</p>
           <p class="indent">- 영상 제목: [작품명_2025 흑산 섬 영상 공모전]</p>
           <p class="indent">- 필수 해시태그: #HIFF #흑산도 #흑산섬영화제 (영상 설명란 또는 댓글에 기입)</p>
           <p class="indent">- 출품신청서 온라인 제출</p>
           <br>
           <br>
-          <p class="bold">• 시상내역 : 총 상금 1,000만원 / 총 5팀 수상</p>
-          <p class="indent bold">- 대상(1명) : 500만원</p>
-          <p class="indent bold">- 최우수상(1명) : 300만원</p>
-          <p class="indent bold">- 우수상(1명) : 100만원</p>
-          <p class="indent bold">- 장려상(2명) : 50만원</p>
+          <p><span class="bold">• 시상내역 :</span> 총 상금 1,000만원 / 총 5팀 수상</p>
+          <p class="indent"><span class="bold">- 대상(1명)</span> : 500만원</p>
+          <p class="indent"><span class="bold">- 최우수상(1명)</span> : 300만원</p>
+          <p class="indent"><span class="bold">- 우수상(1명)</span> : 100만원</p>
+          <p class="indent"><span class="bold">- 장려상(2명)</span> : 50만원</p>
           <br>
           <br>
           <p class="bold">• 기타사항</p>
@@ -97,7 +97,7 @@
     
     <!-- 배경 이미지 -->
     <div class="background-container">
-      <img src="images/main_background.png" alt="흑산도 배경" />
+      <img src="images/background_call.png" alt="흑산도 배경" />
     </div>
   </div>
   
@@ -131,6 +131,30 @@
 
     }
   </script>
-  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+      threshold: 0.2 // 요소의 10%가 보이면 동작
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // 순차적으로 등장하도록 지연
+          setTimeout(() => {
+            entry.target.classList.add('show');
+          }, index * 500); // 각 요소마다 0.3초 간격
+          observer.unobserve(entry.target); // 한 번만 실행
+        }
+      });
+    }, observerOptions);
+
+    const items = document.querySelectorAll('.title-wrapper > *');
+    items.forEach(item => {
+      item.classList.add('fade-in-up');
+      observer.observe(item);
+    });
+  });
+</script>
 </body>
 </html>

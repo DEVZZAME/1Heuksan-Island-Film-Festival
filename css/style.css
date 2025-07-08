@@ -105,18 +105,27 @@ html, body {
   cursor: pointer;
 }
 
-.hero-text {
+.content-wrapper {
   position: absolute;
-  z-index: 30;
-  top: 7%;
+  top: 0%; /*위치조절*/
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
+  width: 90%;
+  max-width: 1200px;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-text {
+  z-index: 30;
   text-align: center;
   font-family: "Anonymous Pro", monospace;
-  font-size: clamp(40px, 3.3vw, 50px);
+  font-size: clamp(24px, 4.5vw, 72px);
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.2;
   letter-spacing: 21.618px;
   white-space: nowrap;
   background: linear-gradient(180deg, #001646 -13.69%, rgba(79, 103, 153, 0.32) 90.77%, rgba(159, 183, 237, 0.00) 195.24%);
@@ -124,42 +133,35 @@ html, body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   mix-blend-mode: plus-lighter;
+  margin-top: 260px;
+  margin-bottom: 140px; /*위치조절*/
 }
 
 .main-title {
-  position: absolute;
   z-index: 30;
-  top: 14%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px; /*위치조절*/
 }
 
 .title-cn {
   filter: brightness(0) invert(1);
-  width: 13.23vw;
-  min-width: 200px;
+  width: 233px;
   height: auto;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /*위치조절*/
 }
 
 .title-ko {
   filter: brightness(0) invert(1);
-  width: 21.2vw;
-  min-width: 320px;
+  width: 449px;
   height: auto;
   display: block;
 }
 
 .main-subtitle {
-  position: absolute;
-  top: 22%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: white;
   z-index: 30;
@@ -168,9 +170,9 @@ html, body {
 }
 
 .subtitle-phrase {
-  font-size: clamp(16px, 1.3vw, 20px);
+  font-size: clamp(16px, 2vw, 27px);
   font-weight: 300;
-  margin-bottom: 26px;
+  margin-bottom: 26px; /*위치조절*/
   white-space: nowrap;
 }
 
@@ -180,73 +182,65 @@ html, body {
   padding: 8px 20px;
   border-radius: 6px;
   font-weight: 500;
-  font-size: clamp(14px, 1.06vw, 16px);
-  margin-bottom: 80px;
+  font-size: clamp(14px, 1.6vw, 22px);
+  margin-bottom: 140px; /*위치조절*/
   white-space: nowrap;
 }
 
 .subtitle-desc {
-  font-size: clamp(14px, 1.06vw, 16px);
+  font-size: clamp(14px, 1.6vw, 22px);
   line-height: 2;
   opacity: 0.8;
 }
 
 .content-1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: white;
   z-index: 30;
   font-family: 'YESMyoungjo-Regular', serif;
   white-space: nowrap;
+  margin-top: 600px; /*위치조절*/
+  margin-bottom: 300px;
 }
 
 .content-1 p {
-  font-size: clamp(14px, 1.06vw, 16px);
-  line-height: 2.6;
+  font-size: clamp(14px, 1.6vw, 22px);
+  line-height: 2.4;
   opacity: 0.8;
 }
 
 .content-2 {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
+  text-align: center;
   color: white;
   z-index: 30;
   font-family: 'YESMyoungjo-Regular', serif;
   width: 80%;
 }
 .content-2 .first {
-  font-size: clamp(14px, 2.4vw, 26px);
+  font-size: clamp(24px, 3vw, 36px);
 }
 
 .text-line {
-  width: 200px;
+  width: 280px;
+  margin-top: 10px;
   margin-bottom: 40px;
 }
 
 .content-2 .second {
-  font-size: clamp(14px, 1.06vw, 16px);
+  font-size: clamp(14px, 2vw, 26px);
   margin-bottom: 20px;
   font-weight: 700;
 }
 .content-2 .third, .third_mobile {
-  font-family: 'YESMyoungjo-Regular', serif;
-  font-size: clamp(12px, 1vw, 12px);
+  font-family: 'Pretendard', sans-serif;
+  font-size: clamp(12px, 1.8vw, 18px);
   font-weight: 400;
-  line-height: 3;
-  padding: 10% 0;
+  line-height: 2.6;
+  color: #C9D0E4;
+  margin-bottom: 200px;
 }
 
 .content-3 {
-  position: absolute;
-  top: 88%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 30;
   width: 100%;
   display: flex;
@@ -285,104 +279,6 @@ html, body {
     transform: translate(5vw, -5vh);
   }
 }
-
-@media (max-width: 1260px) {
-  .background-container img {
-    width: 120vw;
-  }
-}
-
-@media (max-width: 1024px) {
-  .background-container img {
-    width: 134vw;
-  }
-}
-
-@media (max-width: 910px) {
-  .background-container img {
-    width: 138vw;
-  }
-}
-
-@media (max-width: 810px) {
-  .background-container img {
-    width: 150vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .background-container img {
-    width: 170vw;
-  }
-  .subtitle-date{
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 660px) {
-  .background-container img {
-    width: 180vw;
-  }
-  .hero-text {
-    letter-spacing: 1px;
-  }
-  .main-subtitle{
-    top: 24%;
-  }
-  .subtitle-date{
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 550px) {
-  .background-container img {
-    width: 220vw;
-  }
-}
-
-@media (max-width: 460px) {
-  .background-container img {
-    width: 250vw;
-  }
-  .content-2{
-    top: 73%;
-  }
-  .content-3{
-    top: 92%;
-  }
-  .hero-text{
-    font-size: 30px;
-  }
-  .title-cn {
-    width: 180px;
-    min-width: 180px;
-  }
-  .title-ko {
-    width: 280px;
-    min-width: 280px;
-  }
-}
-
-@media (max-width: 400px) {
-  .background-container img {
-    width: 300vw;
-  }
-}
-
-@media (max-width: 360px) {
-  .background-container img {
-    width: 400vw;
-  }
-  .title-cn {
-    width: 150px;
-    min-width: 150px;
-  }
-  .title-ko {
-    width: 250px;
-    min-width: 250px;
-  }
-}
-
 .gnb-background{
   display: none;
   position: fixed;
@@ -392,4 +288,29 @@ html, body {
   width: 100vw;
   padding: 20px 0px;
   color: transparent;
+}
+
+/* 공통 클래스 */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* 화면에 보일 때 추가되는 클래스 */
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-wrapper > * {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  will-change: opacity, transform;
+}
+
+.content-wrapper > *.show {
+  opacity: 1;
+  transform: translateY(0);
 }

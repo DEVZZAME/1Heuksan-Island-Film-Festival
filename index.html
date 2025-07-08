@@ -11,6 +11,7 @@
   <meta property="og:url" content="https://hiff.site/" />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive_style.css" />
   <link rel="stylesheet" href="css/fonts.css" />
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet" />
   <link href="https://db.onlinewebfonts.com/c/66e0421639059890083df5bbd6cee605?family=Nelphim" rel="stylesheet" />
@@ -35,6 +36,8 @@
       </div>
       <span id="gnbTitle">흑산 섬 영화제</span>
     </div>
+    
+    <div class="content-wrapper">
     <!-- 영문 타이틀 -->
     <div class="hero-text">Heuksan Island<br>Film Festival</div>
     <!-- 메인 타이틀 -->
@@ -79,8 +82,12 @@
         그곳에 ‘파시(波市)’라 불리는 바다 위의 시장이 있었습니다.<br>
         <br>
         <파시>는<br>
-        서해안 일대에서 펄쳐졌던 집단 어로문화의 중심, 흑산도 파시의 생생한 흔적을 따라갑니다.<br>
-        현장을 누비는 어민의 중언, 기록을 남긴 작가의 시선, 그 모든 풍경을 담아낸 촬영감독의 렌즈를 통해 지금은 사라진 삶의 빛과 그림자를 그려내 봅니다.<br>
+        서해안 일대에서 펄쳐졌던 집단 어로문화의 중심,<br>
+        흑산도 파시의 생생한 흔적을 따라갑니다.<br>
+        현장을 누비는 어민의 중언, 기록을 남긴 작가의 시선,<br>
+        그 모든 풍경을 담아낸 촬영감독의 렌즈를 통해<br>
+        지금은 사라진 삶의 빛과 그림자를 그려내 봅니다.<br>
+        <br>
         최현정 작가의 집요한 기록과<br>
         강호진 촬영감독의 생생한 영상,<br>
         그리고 제작자이자 연출자인 강제윤 시인의 시적인 감성이 만나<br>
@@ -106,7 +113,7 @@
         <img src="images/slide3.png" class="gallery-image" />
       </div>
     </section>
-
+ </div>
     <!-- 파티클 효과 -->
     <div class="particle-overlay">
       <div id="particles-js"></div>
@@ -190,6 +197,33 @@
       }
     });
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+      threshold: 0.3 // 요소의 10%가 보이면 동작
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // 순차적으로 등장하도록 지연
+          setTimeout(() => {
+            entry.target.classList.add('show');
+          }, index * 800); // 각 요소마다 0.3초 간격
+          observer.unobserve(entry.target); // 한 번만 실행
+        }
+      });
+    }, observerOptions);
+
+    const items = document.querySelectorAll('.content-wrapper > *');
+    items.forEach(item => {
+      item.classList.add('fade-in-up');
+      observer.observe(item);
+    });
+  });
+</script>
+
+
   
 </body>
 </html>

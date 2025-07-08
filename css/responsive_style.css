@@ -1,0 +1,85 @@
+/* @media (max-width: 1920px) {
+  .background-container img {
+    width: 100vw;
+  }
+  .content-wrapper {
+    top: 0%; /*위치조절*/
+  }
+  .hero-text {
+    font-size: clamp(24px, 4.5vw, 72px);
+    margin-bottom: 100px;
+    /*위치조절*/
+  }
+
+  .main-title {
+    margin-bottom: 100px;
+    /*위치조절*/
+  }
+
+  .title-cn {
+    width: 233px;
+    margin-bottom: 40px;
+    /*위치조절*/
+  }
+
+  .subtitle-phrase {
+    font-size: clamp(16px, 2vw, 27px);
+    margin-bottom: 26px;
+    /*위치조절*/
+  }
+
+  .subtitle-date {
+    font-size: clamp(14px, 1.6vw, 22px);
+    margin-bottom: 100px;
+    /*위치조절*/
+  }
+
+  .content-1 {
+    margin-top: 600px;
+    /*위치조절*/
+  }
+} */
+
+@media (max-width: 1440px) {
+  .background-container img {
+    width: 120vw;
+  }
+}
+
+@media (max-width: 1280px) {
+  .background-container img {
+    width: 120vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .background-container img {
+    width: 120vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .background-container img {
+    width: 120vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-container img {
+    width: 120vw;
+  }
+
+  .hero-text {
+    letter-spacing: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .background-container img {
+    width: 120vw;
+  }
+
+  .hero-text {
+    letter-spacing: 6px;
+  }
+}
